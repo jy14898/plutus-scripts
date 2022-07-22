@@ -1,8 +1,8 @@
 Cabal-Version:      2.4
 Name:               plutus-script
 Version:            0.1.0.0
-Author:             James Browning
-Maintainer:         james.browning@iohk.io
+Author:             James Browning - forked by Tknott95
+Maintainer:         james.browning@iohk.io - forked by Tknott95
 Build-Type:         Simple
 Copyright:          © 2022 James Browning
 -- License:            Apache-2.0
