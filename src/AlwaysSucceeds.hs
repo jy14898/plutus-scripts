@@ -31,7 +31,7 @@ import           PlutusTx.Prelude         as P hiding (Semigroup (..), unless,
 import           Prelude                  (IO, (.))
 
 
-{-# INLINEABLE mkValidator #-}
+{-# INLINEABLE alwaysSucceeds #-}
 alwaysSucceeds :: BuiltinData -> BuiltinData -> BuiltinData -> ()
 alwaysSucceeds _ _ _ = ()
 
