@@ -47,4 +47,4 @@ serialisedScript :: PlutusScript PlutusScriptV2
 serialisedScript = PlutusScriptSerialised scriptShortBs
 
 writeSerialisedScript :: IO ()
-writeSerialisedScript = void $ writeFileTextEnvelope "ecdsa-secp256k-policy.plutus" Nothing serialisedScript
+writeSerialisedScript = void $ writeFileTextEnvelope "scripts/ecdsa-secp256k-policy.plutus" Nothing serialisedScript

@@ -51,10 +51,10 @@ alwaysSucceedsSerialised :: PlutusScript PlutusScriptV1
 alwaysSucceedsSerialised = PlutusScriptSerialised alwaysSucceedsSBS
 
 writeAlwaysSucceedsScript :: IO ()
-writeAlwaysSucceedsScript = void $ writeFileTextEnvelope "alwayssucceeds.plutus" Nothing alwaysSucceedsSerialised
+writeAlwaysSucceedsScript = void $ writeFileTextEnvelope "scripts/alwayssucceeds.plutus" Nothing alwaysSucceedsSerialised
 
 alwaysSucceedsSerialisedV2 :: PlutusScript PlutusScriptV2
 alwaysSucceedsSerialisedV2 = PlutusScriptSerialised alwaysSucceedsSBS
 
 writeAlwaysSucceedsScriptV2 :: IO ()
-writeAlwaysSucceedsScriptV2 = void $ writeFileTextEnvelope "alwayssucceeds-v2.plutus" Nothing alwaysSucceedsSerialisedV2
+writeAlwaysSucceedsScriptV2 = void $ writeFileTextEnvelope "scripts/alwayssucceeds-v2.plutus" Nothing alwaysSucceedsSerialisedV2

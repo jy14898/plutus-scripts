@@ -114,4 +114,4 @@ serialisedScript :: PlutusScript PlutusScriptV2
 serialisedScript = PlutusScriptSerialised scriptSBS
 
 writeSerialisedScript :: IO ()
-writeSerialisedScript = void $ writeFileTextEnvelope "nft-mint-V2.plutus" Nothing serialisedScript
+writeSerialisedScript = void $ writeFileTextEnvelope "scripts/nft-mint-V2.plutus" Nothing serialisedScript

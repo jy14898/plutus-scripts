@@ -70,10 +70,10 @@ helloWorldSerialised :: PlutusScript PlutusScriptV1
 helloWorldSerialised = PlutusScriptSerialised helloWorldSBS
 
 writeHelloWorldScript :: IO ()
-writeHelloWorldScript = void $ writeFileTextEnvelope "untyped-helloWorld.plutus" Nothing helloWorldSerialised
+writeHelloWorldScript = void $ writeFileTextEnvelope "scripts/untyped-helloWorld.plutus" Nothing helloWorldSerialised
 
 helloWorldSerialisedV2 :: PlutusScript PlutusScriptV2
 helloWorldSerialisedV2 = PlutusScriptSerialised helloWorldSBS
 
 writeHelloWorldScriptV2 :: IO ()
-writeHelloWorldScriptV2 = void $ writeFileTextEnvelope "untyped-helloWorld-v2.plutus" Nothing helloWorldSerialisedV2
+writeHelloWorldScriptV2 = void $ writeFileTextEnvelope "scripts/untyped-helloWorld-v2.plutus" Nothing helloWorldSerialisedV2

@@ -67,7 +67,7 @@ serialisedScriptV1 :: PlutusScript PlutusScriptV1
 serialisedScriptV1 = PlutusScriptSerialised scriptSBSV1
 
 writeSerialisedScriptV1 :: IO ()
-writeSerialisedScriptV1 = void $ writeFileTextEnvelope "deadline-redeemer-policy-v1.plutus" Nothing serialisedScriptV1
+writeSerialisedScriptV1 = void $ writeFileTextEnvelope "scripts/deadline-redeemer-policy-v1.plutus" Nothing serialisedScriptV1
 
 -- V2
 
@@ -94,4 +94,4 @@ serialisedScriptV2 :: PlutusScript PlutusScriptV2
 serialisedScriptV2 = PlutusScriptSerialised scriptSBSV2
 
 writeSerialisedScriptV2 :: IO ()
-writeSerialisedScriptV2 = void $ writeFileTextEnvelope "deadline-redeemer-policy-v2.plutus" Nothing serialisedScriptV2
+writeSerialisedScriptV2 = void $ writeFileTextEnvelope "scripts/deadline-redeemer-policy-v2.plutus" Nothing serialisedScriptV2

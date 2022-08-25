@@ -178,10 +178,10 @@ serialisedScriptV2 :: PlutusScript PlutusScriptV2
 serialisedScriptV2 = PlutusScriptSerialised scriptSBSV2
 
 writeSerialisedScriptV1 :: IO ()
-writeSerialisedScriptV1 = void $ writeFileTextEnvelope "deadline-V1.plutus" Nothing serialisedScriptV1
+writeSerialisedScriptV1 = void $ writeFileTextEnvelope "scripts/deadline-V1.plutus" Nothing serialisedScriptV1
 
 writeSerialisedScriptV2 :: IO ()
-writeSerialisedScriptV2 = void $ writeFileTextEnvelope "deadline-V2.plutus" Nothing serialisedScriptV2
+writeSerialisedScriptV2 = void $ writeFileTextEnvelope "scripts/deadline-V2.plutus" Nothing serialisedScriptV2
 
 {-
     Offchain Contract

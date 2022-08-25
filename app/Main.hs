@@ -1,0 +1,64 @@
+module Main where
+
+import qualified AlwaysSucceeds
+import qualified CheckDatumMapPolicy
+import qualified CheckDatumPolicy
+import qualified CheckRedeemersPolicy
+import qualified CheckReferenceInputs
+import qualified CheckReferenceScriptPolicy
+import qualified CheckSameInlineDatumAtAllInputs
+import qualified CheckSameInlineDatumAtMultipleInputs
+import qualified CheckTxInDatumPolicyV1
+import qualified CheckWitnessPolicy
+import qualified CountDatumMapPolicy
+import qualified CountRedeemersPolicy
+import qualified CountReferenceInputsPolicy
+import qualified Deadline
+import qualified DeadlinePolicy
+import qualified DeadlineRedeemerPolicy
+import qualified EcdsaSecp256k1Validator
+import qualified NFTMint
+import qualified ParamPolicy
+import qualified SchnorrSecp256k1Validator
+import qualified TokenNamePolicy
+import qualified TxInfoDataEquivalence
+import qualified TypedDatumRedeemer42
+import qualified UntypedHelloWorld
+import qualified ValidRangeEquivilance
+
+import System.Directory (createDirectoryIfMissing)
+
+main :: IO ()
+main = do
+  createDirectoryIfMissing True "scripts"
+  AlwaysSucceeds.writeAlwaysSucceedsScript
+  AlwaysSucceeds.writeAlwaysSucceedsScriptV2
+  CheckDatumMapPolicy.writeSerialisedScript
+  CheckDatumPolicy.writeSerialisedScript
+  CheckRedeemersPolicy.writeSerialisedScript
+  CheckReferenceInputs.writeSerialisedScript
+  CheckReferenceScriptPolicy.writeSerialisedScript
+  CheckSameInlineDatumAtAllInputs.writeSerialisedScript
+  CheckSameInlineDatumAtMultipleInputs.writeSerialisedScript
+  CheckTxInDatumPolicyV1.writeSerialisedScript
+  CheckWitnessPolicy.writeSerialisedScript
+  CountDatumMapPolicy.writeSerialisedScript
+  CountRedeemersPolicy.writeSerialisedScript
+  Deadline.writeSerialisedScriptV1
+  Deadline.writeSerialisedScriptV2
+  DeadlinePolicy.writeSerialisedScriptV1
+  DeadlinePolicy.writeSerialisedScriptV2
+  DeadlineRedeemerPolicy.writeSerialisedScriptV1
+  DeadlineRedeemerPolicy.writeSerialisedScriptV2
+  EcdsaSecp256k1Validator.writeSerialisedScript
+  NFTMint.writeSerialisedScript
+  ParamPolicy.writeSerialisedScript
+  SchnorrSecp256k1Validator.writeSerialisedScript
+  TokenNamePolicy.writeSerialisedScriptV1
+  TokenNamePolicy.writeSerialisedScriptV2
+  TxInfoDataEquivalence.writeSerialisedScript
+  TypedDatumRedeemer42.writeDatumRedeemer42Script
+  UntypedHelloWorld.writeHelloWorldScript
+  UntypedHelloWorld.writeHelloWorldScriptV2
+  ValidRangeEquivilance.writeSerialisedScriptV1
+  ValidRangeEquivilance.writeSerialisedScriptV2

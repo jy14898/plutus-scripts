@@ -145,7 +145,7 @@ serialisedScriptV1 :: PlutusScript PlutusScriptV1
 serialisedScriptV1 = PlutusScriptSerialised scriptSBSV1
 
 writeSerialisedScriptV1 :: IO ()
-writeSerialisedScriptV1 = void $ writeFileTextEnvelope "valid-range-inequivilance-v1.plutus" Nothing serialisedScriptV1
+writeSerialisedScriptV1 = void $ writeFileTextEnvelope "scripts/valid-range-inequivilance-v1.plutus" Nothing serialisedScriptV1
 
 -- V2
 
@@ -174,4 +174,4 @@ serialisedScriptV2 :: PlutusScript PlutusScriptV2
 serialisedScriptV2 = PlutusScriptSerialised scriptSBSV2
 
 writeSerialisedScriptV2 :: IO ()
-writeSerialisedScriptV2 = void $ writeFileTextEnvelope "valid-range-equivilance-v2.plutus" Nothing serialisedScriptV2
+writeSerialisedScriptV2 = void $ writeFileTextEnvelope "scripts/valid-range-equivilance-v2.plutus" Nothing serialisedScriptV2

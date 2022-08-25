@@ -97,7 +97,7 @@ datumRedeemer42Serialised :: PlutusScript PlutusScriptV1
 datumRedeemer42Serialised = PlutusScriptSerialised datumRedeemer42SBS
 
 writeDatumRedeemer42Script :: IO ()
-writeDatumRedeemer42Script = void $ writeFileTextEnvelope "typed-datum-redeemer-42.plutus" Nothing datumRedeemer42Serialised
+writeDatumRedeemer42Script = void $ writeFileTextEnvelope "scripts/typed-datum-redeemer-42.plutus" Nothing datumRedeemer42Serialised
 
 {-
     Offchain Contract
