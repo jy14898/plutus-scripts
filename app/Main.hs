@@ -3,6 +3,7 @@ module Main where
 import qualified AlwaysSucceeds
 import qualified CheckDatumMapPolicy
 import qualified CheckDatumPolicy
+import qualified CheckDatumIsInline
 import qualified CheckRedeemersPolicy
 import qualified CheckReferenceInputs
 import qualified CheckReferenceScriptPolicy
@@ -35,6 +36,7 @@ main = do
   AlwaysSucceeds.writeAlwaysSucceedsScriptV2
   CheckDatumMapPolicy.writeSerialisedScript
   CheckDatumPolicy.writeSerialisedScript
+  CheckDatumIsInline.writeSerialisedScript
   CheckRedeemersPolicy.writeSerialisedScript
   CheckReferenceInputs.writeSerialisedScript
   CheckReferenceScriptPolicy.writeSerialisedScript

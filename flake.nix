@@ -16,34 +16,38 @@
             final.haskell-nix.project' {
               src = ./.;
               compiler-nix-name = "ghc8107";
-              # This is used by `nix develop .` to open a shell for use with
-              # `cabal`, `hlint` and `haskell-language-server`
-              shell.tools = {
-                cabal = {};
-                hlint = {};
-                # hls-haddock-comments-plugin
-                haskell-language-server = {
-                  version = "latest";
-                  cabalProject = ''
-                    packages: .
-                    package haskell-language-server
-                      flags: -haddockComments
-                  '';
-                };
-              };
-              # Non-Haskell shell tools go here
-              shell.buildInputs = with pkgs; [
-                nixpkgs-fmt
-              ];
+              shell = {
+                withHoogle = true;
 
-              shell.inputsFrom = [ pkgs.libsodium-vrf ];
-              shell.nativeBuildInputs = with pkgs;
-                [
-                  libsodium-vrf
+                # This is used by `nix develop .` to open a shell for use with
+                # `cabal`, `hlint` and `haskell-language-server`
+                tools = {
+                  cabal = {};
+                  hlint = {};
+                  # hls-haddock-comments-plugin
+                  haskell-language-server = {
+                    version = "latest";
+                    cabalProject = ''
+                      packages: .
+                      package haskell-language-server
+                        flags: -haddockComments
+                    '';
+                  };
+                };
+                # Non-Haskell shell tools go here
+                buildInputs = with pkgs; [
+                  nixpkgs-fmt
                 ];
 
-              # This adds `js-unknown-ghcjs-cabal` to the shell.
-              # shell.crossPlatforms = p: [p.ghcjs];
+                inputsFrom = [ pkgs.libsodium-vrf ];
+                nativeBuildInputs = with pkgs;
+                  [
+                    libsodium-vrf
+                  ];
+
+                # This adds `js-unknown-ghcjs-cabal` to the shell.
+                # shell.crossPlatforms = p: [p.ghcjs];
+              };
             };
         })
       ];
